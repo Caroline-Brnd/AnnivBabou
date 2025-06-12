@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cemantix Anniv - Jouer</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>Cemantix Game</h1>
+  <p>Tapez un mot lié à la montgolfière et validez pour obtenir un score de proximité.</p>
+  
+  <form id="attemptForm" autocomplete="off" aria-describedby="hintBox">
+    <input id="wordInput" type="text" name="word" placeholder="Tapez votre mot..." aria-label="Mot proposé" required minlength="2" />
+    <button type="submit" id="submitBtn" disabled>Valider</button>
+  </form>
+  <div style="margin-top: 1rem; display:flex; gap:1rem; justify-content:center;">
+    <button id="hintBtn" disabled aria-label="Afficher un indice">Indice</button>
+    <button id="resetBtn" aria-label="Recommencer la partie">Recommencer</button>
+    <a href="home.html" class="button-link btn-secondary" aria-label="Retourner à l'accueil">Accueil</a>
+  </div>
+  
+  <div id="hintBox" class="hint-box hidden" aria-live="polite" aria-atomic="true"></div>
+
+  <div id="attemptsList" class="attempts-list" aria-live="polite" aria-atomic="true" tabindex="0" aria-label="Historique des tentatives"></div>
+</div>
+
+<script src="app.js" defer></script>
+
+</body>
+</html>

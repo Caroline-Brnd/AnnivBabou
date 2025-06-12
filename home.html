@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cemantix Aérien - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f6f9ff;
+      color: #1e293b;
+      margin: 0;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 16px;
+      display: flex;
+      justify-content: center;
+    }
+    main {
+      max-width: 600px;
+      width: 100%;
+    }
+    /* Typography */
+    h1 {
+      font-weight: 700;
+      font-size: 2.25rem;
+      color: #2563eb;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    h1 .material-icons {
+      background: #93c5fd;
+      border-radius: 9999px;
+      color: white;
+      padding: 8px;
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    p.subtitle {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #475569;
+      margin-top: 0;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    /* Cards container */
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 16px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 12px rgb(100 116 139 / 0.1);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .card-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+    /* Individual card colors */
+    .card.objectif {
+      background-color: #dbeafe;
+      color: #1e40af;
+      box-shadow: 0 6px 12px rgb(100 116 139 / 0.1);
+    }
+    .card.objectif .card-icon {
+      background-color: #3b82f6;
+    }
+    .card.scoring {
+      background-color: #e0e7ff;
+      color: #3730a3;
+      box-shadow: 0 6px 12px rgb(100 116 139 / 0.1);
+    }
+    .card.scoring .card-icon {
+      background-color: #4338ca;
+    }
+    .card.indices {
+      background-color: #e8e8ff;
+      color: #4338ca;
+      box-shadow: 0 6px 12px rgb(100 116 139 / 0.1);
+    }
+    .card.indices .card-icon {
+      background-color: #6366f1;
+    }
+    /* Card content styles */
+    .card-content {
+      flex-grow: 1;
+    }
+    .card-content strong {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .scoring-list {
+      font-size: 0.94rem;
+      padding-left: 14px;
+      margin: 0;
+      list-style: none;
+      color: #292524;
+    }
+    .scoring-list li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .score-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .score-dot.green { background-color: #22c55e; }
+    .score-dot.yellow { background-color: #eab308; }
+    .score-dot.orange { background-color: #f97316; }
+    .score-dot.red { background-color: #ef4444; }
+    /* Theme of the day */
+    .theme-container {
+      background-color: #bfdbfe;
+      color: #1e40af;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-size: 1rem;
+      margin-bottom: 48px;
+      text-align: center;
+      box-shadow: inset 0 0 0 1px #60a5fa;
+      user-select: none;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      body {
+        padding: 24px 12px;
+      }
+      main {
+        max-width: 100%;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      button.start-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+    }
+    .button-game {
+        cursor: pointer;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.75rem 2.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #fff;
+        background: linear-gradient(90deg, #0284c7, #0ea5e9);
+        transition: all 0.25s ease;
+        box-shadow: 0 6px 12px rgb(14 165 233 / 0.4);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>
+      🥰 Cemantix Aérien
+    </h1>
+    <p class="subtitle">
+      Découvrez le mot mystère qui vole dans les airs ! 
+      <span class="material-icons" aria-hidden="true" style="font-size:18px; margin-left:4px;">emoji_symbols</span>
+    </p>
+
+    <section class="card objectif" aria-labelledby="objectif-title">
+      <span class="card-icon" aria-hidden="true"><span class="material-icons">ads_click</span></span>
+      <div class="card-content">
+        <strong id="objectif-title">Objectif</strong>
+        Trouvez le mot mystère en proposant des mots sémantiquement liés.<br />
+        Plus votre mot est proche du thème, plus votre score sera élevé !
+      </div>
+    </section>
+
+    <section class="card scoring" aria-labelledby="scoring-title">
+      <span class="card-icon" aria-hidden="true"><span class="material-icons">emoji_events</span></span>
+      <div class="card-content">
+        <strong id="scoring-title">Scoring</strong>
+        <ul class="scoring-list">
+          <li><span class="score-dot green" aria-hidden="true"></span> 90-100 : Très proche ! Vous brûlez !</li>
+          <li><span class="score-dot yellow" aria-hidden="true"></span> 70-89 : Proche, continuez dans cette direction</li>
+          <li><span class="score-dot orange" aria-hidden="true"></span> 40-69 : Moyennement proche</li>
+          <li><span class="score-dot red" aria-hidden="true"></span> 1-39 : Éloigné du thème</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card indices" aria-labelledby="indices-title">
+      <span class="card-icon" aria-hidden="true"><span class="material-icons">info</span></span>
+      <div class="card-content">
+        <strong id="indices-title">Indices</strong>
+        Utilisez le bouton "Indice" si vous êtes bloqué. Des indices progressifs vous aideront à trouver le mot mystère !
+      </div>
+    </section>
+
+    <div class="theme-container" aria-live="polite" aria-atomic="true">
+      <span aria-hidden="true" class="material-icons" style="vertical-align: bottom;">wb_twilight</span>
+      &nbsp;Quelque chose qui s'élève gracieusement dans le ciel...&nbsp;
+      <span aria-hidden="true" class="material-icons" style="vertical-align: bottom;">wb_twilight</span>
+    </div>
+
+    <button class="button-game" id="start-button">Commencer à jouer</button>
+  </main>
+   <script>
+        document.getElementById("start-button").addEventListener("click", function() {
+            window.location.href = "./Anniv/game.html";
+        });
+    </script>
+</body>
+</html>

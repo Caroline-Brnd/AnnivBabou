@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cemantix Aérien - Félicitations !</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .victory-container {
+    background: #f0f9ffdd;
+    padding: 3rem 4rem;
+    border-radius: 2rem;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgb(14 165 233 / 0.3);
+    animation: pulse 2s infinite alternate;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 30px #0284c7a0; }
+    100% { box-shadow: 0 20px 45px #0ea5e9a0; }
+  }
+  .icon-balloon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: #0ea5e9;
+  }
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: #0284c7;
+  }
+  p {
+    color: #475569;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .secret-word {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #0369a1;
+    margin-bottom: 1rem;
+  }
+  .attempts-count {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+  }
+  button {
+    background: linear-gradient(90deg, #0284c7, #0ea5e9);
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.75rem 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgb(14 165 233 / 0.4);
+    margin: 0 0.5rem;
+    transition: all 0.25s ease;
+  }
+  button:hover {
+    background: linear-gradient(90deg, #0c4a6e, #0369a1);
+    box-shadow: 0 8px 20px rgb(14 165 233 / 0.7);
+    transform: scale(1.05);
+  }
+  .secondary-btn {
+    background: #64748b;
+  }
+  .secondary-btn:hover {
+    background: #475569;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="victory-container" role="dialog" aria-modal="true" aria-labelledby="victoryTitle" aria-describedby="victoryDesc">
+  <div class="icon-balloon" aria-hidden="true">🎈</div>
+  <h1 id="victoryTitle">Bravo !</h1>
+  <p id="victoryDesc">Vous avez trouvé le mot mystère :</p>
+  <div class="secret-word" aria-label="Mot mystère trouvé">MONGOLFIÈRE</div>
+  <div class="attempts-count" id="attemptCount" aria-live="polite" aria-atomic="true">Trouvé en X tentative(s) !</div>
+  <div class="btn-container">
+    <button id="playAgainBtn" aria-label="Rejouer" type="button">Rejouer</button>
+    <button id="goHomeBtn" aria-label="Retour à l'accueil" class="secondary-btn" type="button">Accueil</button>
+  </div>
+</div>
+
+<script>
+  // Replace X below with actual number of attempts dynamically if needed
+  const attemptCount = 5;  // Example value; update as needed
+
+  document.getElementById('attemptCount').textContent = `Trouvé en ${attemptCount} tentative${attemptCount > 1 ? 's' : ''} !`;
+
+  document.getElementById('playAgainBtn').addEventListener('click', () => {
+    // Navigate to the game page
+    window.location.href = 'game.html';
+  });
+
+  document.getElementById('goHomeBtn').addEventListener('click', () => {
+    // Navigate to the home page
+    window.location.href = '../home.html';
+  });
+</script>
+
+</body>
+</html>
