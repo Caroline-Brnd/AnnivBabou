@@ -3,7 +3,7 @@
 
   const targetWord = 'MONTGOLFIÈRE';
 
-  const semanticWords = {
+const semanticWords = {
     "MONTGOLFIÈRE": 100,
     "BALLON": 98,
     "VOLER": 96,
@@ -57,7 +57,22 @@
     "PROBLÈME": 1,
     "DELTAPLANE": 35,
     "PARACHUTE": 33,
-  };
+    "AÉROSTIER": 69,
+    "EXPLORATEUR": 79,
+    "AVENTURIER": 77,
+    "VOYAGEUR": 75,
+    "PIONNIER": 73,
+    "PASSIONNÉ": 71,
+    "CHAMPIONNAT": 8,
+    "RENCONTRE": 6,
+    "DÉFILÉ": 4,
+    "COURSE": 2,
+    "PRÉVISIONS": 91,
+    "CONDITIONS": 89,
+    "ATTERRISSAGE": 87,
+    "SYMBIOSE": 14,
+    "PERSPECTIVE": 16
+};
 
   const hints = [
     "C’est une expérience qui te fera prendre de la hauteur…",
