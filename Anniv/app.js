@@ -58,9 +58,9 @@
   };
 
   const hints = [
-    "C'est un moyen de transport aérien qui utilise l'air chaud pour s'élever...",
-    "On peut admirer de magnifiques paysages depuis sa nacelle...",
-    "Elle est souvent colorée et participe à des festivals dans le ciel..."
+    "C’est une expérience qui te fera prendre de la hauteur… et j’ai le sentiment que ça va te plaire !",
+    "On va pouvoir admirer des paysages à couper le souffle, confortablement installés…",
+    "C’est une aventure douce, silencieuse et colorée… parfaite pour rêver un peu."
   ];
 
   // Elements
@@ -86,7 +86,7 @@
 
   function renderAttempts() {
     if (attempts.length === 0) {
-      attemptsList.innerHTML = '<p style="text-align:center; color:#94a3b8; font-weight:600;">Aucune tentative pour le moment. Commencez à taper un mot !</p>';
+      attemptsList.innerHTML = '<p style="text-align:center; color:#94a3b8; font-weight:600;">Aucune tentative pour le moment. Commence à taper un mot !</p>';
       return;
     }
     // Sort descending by score
