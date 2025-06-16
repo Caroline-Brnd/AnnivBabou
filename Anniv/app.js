@@ -48,19 +48,22 @@
     "VOITURE": 18,
     "TRAIN": 16,
     "BATEAU": 14,
-    "AVION": 12,
+    "AVION": 31,
     "MAISON": 10,
     "TRAVAIL": 8,
     "ÉCOLE": 6,
     "ORDINATEUR": 4,
     "TÉLÉPHONE": 2,
-    "PROBLÈME": 1
+    "PROBLÈME": 1,
+    "DELTAPLANE": 35,
+    "PARACHUTE": 33,
   };
 
   const hints = [
-    "C’est une expérience qui te fera prendre de la hauteur… et j’ai le sentiment que ça va te plaire !",
-    "On va pouvoir admirer des paysages à couper le souffle, confortablement installés…",
-    "C’est une aventure douce, silencieuse et colorée… parfaite pour rêver un peu."
+    "C’est une expérience qui te fera prendre de la hauteur…",
+    "Aventure douce et silencieuse",
+    "Tu pourra admirer des paysages à couper le souffle",
+    "OHHH c'est bon tu as eu déjà beaucoup d'indices !"
   ];
 
   // Elements
